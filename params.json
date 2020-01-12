@@ -1,0 +1,20 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "adminLogin": {
+            "value": "sqladmin"
+        },
+        "adminPassword": {
+            "reference": {
+              "keyVault": {
+                "id": "/subscriptions/xxxx-a26b-4a35-xxx-51b02cdd2f43/resourceGroups/security/providers/Microsoft.KeyVault/vaults/kv01112020"
+              },
+              "secretName": "MyPassword"
+            }
+        },
+        "sqlServerName": {
+            "value": "sqlxxxxxxx"
+        }
+    }
+}
